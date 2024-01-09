@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "snake-game"
+version = "0.1.0"
+description = "Snake game built with Python's turtle package"
+authors = ["Philippe Costa <philippe.sa.costa@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "snake_game"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic-settings-toml = "^0.2.0"
+loguru = "^0.7.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
