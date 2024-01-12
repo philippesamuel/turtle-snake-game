@@ -18,7 +18,7 @@ SEGMENT_SHAPE: str = settings.snake_segment_shape
 class Snake:
     """Snake class for snake game."""
 
-    _segments: list[Turtle]
+    segments: list[Turtle]
     """List of turtle segments that make up the snake."""
 
     def __init__(self,
@@ -27,17 +27,17 @@ class Snake:
                  segment_shape: str = SEGMENT_SHAPE) -> None:
         """Initialize snake."""
         x_positions = (0 - i * 20 for i in range(size))
-        self._segments = [create_segment(shape=segment_shape, color=color, x=x, y=0) for x in x_positions]
+        self.segments = [create_segment(shape=segment_shape, color=color, x=x, y=0) for x in x_positions]
 
     @property
     def head(self) -> Turtle:
         """Head of the snake."""
-        return self._segments[0]
+        return self.segments[0]
 
     @property
     def tail(self) -> Turtle:
         """Tail of the snake."""
-        return self._segments[-1]
+        return self.segments[-1]
 
     def move(self, move_func: TurtleCallback) -> None:
         """Move snake according to `move_func`.
@@ -46,7 +46,7 @@ class Snake:
             move_func: Function that moves the snake head.
 
         """
-        reversed_segments = self._segments[::-1]
+        reversed_segments = self.segments[::-1]
         for s0, s1 in pairwise(reversed_segments):
             s0.goto(s1.position())
         move_func(self.head)
@@ -74,7 +74,7 @@ class Snake:
     def extend(self) -> None:
         """Extend snake's body by one segment."""
         segment = self.create_segment(x=self.tail.xcor(), y=self.tail.ycor())
-        self._segments.append(segment)
+        self.segments.append(segment)
 
     def create_segment(self, x: float, y: float = 0) -> Turtle:
         """Create a new segment at position (x, y).
