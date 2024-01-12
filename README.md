@@ -6,7 +6,7 @@ Simple snake game built with Python's turtle package.
 - The snake is controlled with the arrow keys. 
 - The goal is to eat as many apples as possible without hitting the walls or the snake's own body. 
 - The game ends when the snake hits the wall or its own body. 
-- The score is displayed in the top right corner.
+- The score is displayed in the top center of the screen.
 
 ## Installation
 

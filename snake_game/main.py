@@ -4,6 +4,7 @@ from turtle import Screen
 from typing import Callable
 
 from snake_game.config import settings
+from snake_game.scoreboard import Scoreboard
 from snake_game.snake import Snake
 from snake_game.food import Food
 
@@ -18,6 +19,7 @@ def main() -> None:
 
     snake = Snake()
     food = Food()
+    scoreboard = Scoreboard()
     screen.listen()
 
     key_bindings: dict[str, Callable[[None], None]] = {
@@ -40,6 +42,7 @@ def main() -> None:
         if snake.head.distance(food) < 15:
             food.refresh()
             snake.extend()
+            scoreboard.increase_score()
 
     screen.exitonclick()
 

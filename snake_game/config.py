@@ -29,6 +29,8 @@ class Settings(BaseSettings):
 
     # Scoreboard settings
     score_color: Color = Field(default=(1, 1, 1), description="Scoreboard color as RGB tuple or color name")
+    score_font: tuple[str, int, str] = Field(default=("Courier", 20, "normal"))
+    score_align: str = Field(default="center")
 
 
 settings = Settings()
