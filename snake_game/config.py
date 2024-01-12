@@ -27,5 +27,8 @@ class Settings(BaseSettings):
     food_color: Color = Field(default=(0.2, 0.2, 1), description="Food color as RGB tuple or color name")
     food_shape: str = Field(default="circle")
 
+    # Scoreboard settings
+    score_color: Color = Field(default=(1, 1, 1), description="Scoreboard color as RGB tuple or color name")
+
 
 settings = Settings()
