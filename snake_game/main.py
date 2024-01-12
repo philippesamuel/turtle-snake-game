@@ -1,3 +1,4 @@
+"""Main module for the snake game."""
 import time
 from turtle import Screen
 from typing import Callable
@@ -8,6 +9,7 @@ from snake_game.food import Food
 
 
 def main() -> None:
+    """Main function. Entry point for the snake game."""
     screen = Screen()
     screen.setup(width=settings.screen_width, height=settings.screen_height)
     screen.bgcolor(settings.screen_bg_color)
