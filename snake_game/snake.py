@@ -10,6 +10,10 @@ DOWN = -90
 LEFT = 180
 RIGHT = 0
 
+START_SIZE: int = settings.snake_start_size
+COLOR: Color = settings.snake_color
+SEGMENT_SHAPE: str = settings.snake_segment_shape
+
 
 class Snake:
     """Snake class for snake game."""
@@ -18,9 +22,9 @@ class Snake:
     """List of turtle segments that make up the snake."""
 
     def __init__(self,
-                 size: int = settings.snake_start_size,
-                 color: Color = settings.snake_color,
-                 segment_shape: str = settings.snake_segment_shape) -> None:
+                 size: int = START_SIZE,
+                 color: Color = COLOR,
+                 segment_shape: str = SEGMENT_SHAPE) -> None:
         """Initialize snake."""
         x_positions = (0 - i * 20 for i in range(size))
         self._segments = [create_segment(shape=segment_shape, color=color, x=x, y=0) for x in x_positions]

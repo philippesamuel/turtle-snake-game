@@ -4,14 +4,18 @@ from turtle import Turtle
 from snake_game.config import settings
 from snake_game.typings import Color, Font
 
+COLOR: Color = settings.score_color
+FONT: Font = settings.score_font
+ALIGNMENT: str = settings.score_align
+
 
 class Scoreboard(Turtle):
     """Scoreboard class for the snake game."""
 
     def __init__(self,
-                 color: Color = settings.score_color,
-                 font: Font = settings.score_font,
-                 align: str = settings.score_align) -> None:
+                 color: Color = COLOR,
+                 font: Font = FONT,
+                 align: str = ALIGNMENT) -> None:
         """Initialize the scoreboard."""
         super().__init__()
         self.score = 0

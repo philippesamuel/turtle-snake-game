@@ -7,14 +7,20 @@ from snake_game.config import settings
 from snake_game.scoreboard import Scoreboard
 from snake_game.snake import Snake
 from snake_game.food import Food
+from snake_game.typings import Color
+
+SCREEN_WIDTH: int = settings.screen_width
+SCREEN_HEIGHT: int = settings.screen_height
+SCREEN_BG_COLOR: Color = settings.screen_bg_color
+SCREEN_TITLE: str = settings.screen_title
 
 
 def main() -> None:
     """Main function. Entry point for the snake game."""
     screen = Screen()
-    screen.setup(width=settings.screen_width, height=settings.screen_height)
-    screen.bgcolor(settings.screen_bg_color)
-    screen.title(settings.screen_title)
+    screen.setup(width=SCREEN_WIDTH, height=SCREEN_HEIGHT)
+    screen.bgcolor(SCREEN_BG_COLOR)
+    screen.title(SCREEN_TITLE)
     screen.tracer(0)
 
     snake = Snake()

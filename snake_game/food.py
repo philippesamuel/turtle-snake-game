@@ -5,6 +5,9 @@ from turtle import Turtle
 from snake_game.config import settings
 from snake_game.typings import Color
 
+COLOR: Color = settings.food_color
+SHAPE: str = settings.food_shape
+
 
 class Food(Turtle):
     """Food class for snake game.
@@ -14,7 +17,8 @@ class Food(Turtle):
     refactored to composition.
 
     """
-    def __init__(self, color: Color = settings.food_color, shape: str = settings.food_shape) -> None:
+
+    def __init__(self, color: Color = COLOR, shape: str = SHAPE) -> None:
         super().__init__(shape=shape)
         self.penup()
         self.shapesize(stretch_len=0.5, stretch_wid=0.5)
