@@ -17,6 +17,7 @@ class Food(Turtle):
     def __init__(self, color: Color = settings.food_color, shape: str = settings.food_shape) -> None:
         super().__init__(shape=shape)
         self.penup()
+        self.shapesize(stretch_len=0.5, stretch_wid=0.5)
         self.color(color)
         self.speed("fastest")
         self.refresh()
@@ -25,10 +26,6 @@ class Food(Turtle):
         """Refresh food position."""
         window_width = self.screen.window_width() * 0.92
         window_height = self.screen.window_height() * 0.92
-
-        # round to nearest 20 (block size/snake segment size)
-        window_width = window_width - window_width % 20
-        window_height = window_height - window_height % 20
 
         x_max = int(window_width // 2)
         y_max = int(window_height // 2)
