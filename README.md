@@ -2,7 +2,7 @@
 # Snake game built with Python's turtle package
 
 Simple snake game built with Python's turtle package. 
-- The game is played on a 800x600 pixel screen. 
+- The game is played on a 600x600 pixel screen. 
 - The snake is controlled with the arrow keys. 
 - The goal is to eat as many apples as possible without hitting the walls or the snake's own body. 
 - The game ends when the snake hits the wall or its own body. 

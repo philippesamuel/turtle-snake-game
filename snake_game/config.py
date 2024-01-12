@@ -13,7 +13,7 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file="../.env", env_file_encoding="utf-8")
 
     # Screen settings
-    screen_width: int = Field(default=800)
+    screen_width: int = Field(default=600)
     screen_height: int = Field(default=600)
     screen_bg_color: Color = Field(default=(0, 0, 0), description="Screen backgroud color as RGB tuple or color name")
     screen_title: str = Field(default="My Snake Game")
