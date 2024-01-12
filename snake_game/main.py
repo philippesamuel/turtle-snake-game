@@ -2,9 +2,9 @@ import time
 from turtle import Screen
 from typing import Callable
 
-from snake import Snake
-
-from config import settings
+from snake_game.config import settings
+from snake_game.snake import Snake
+from snake_game.food import Food
 
 
 def main() -> None:
@@ -15,6 +15,7 @@ def main() -> None:
     screen.tracer(0)
 
     snake = Snake()
+    food = Food()
     screen.listen()
 
     key_bindings: dict[str, Callable[[None], None]] = {
