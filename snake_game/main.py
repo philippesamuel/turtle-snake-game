@@ -50,6 +50,14 @@ def main() -> None:
             snake.extend()
             scoreboard.increase_score()
 
+        # Detect collision with wall
+        x_max = (SCREEN_WIDTH / 2) - 20
+        y_max = (SCREEN_HEIGHT / 2) - 20
+        if (snake.head.xcor() > x_max or snake.head.xcor() < -x_max
+                or snake.head.ycor() > y_max or snake.head.ycor() < -y_max):
+            game_is_on = False
+            scoreboard.game_over()
+
     screen.exitonclick()
 
 

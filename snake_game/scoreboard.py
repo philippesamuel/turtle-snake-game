@@ -38,3 +38,8 @@ class Scoreboard(Turtle):
         """Increase the score."""
         self.score += 1
         self.update_scoreboard()
+
+    def game_over(self) -> None:
+        """Display game over message."""
+        self.goto(x=0, y=0)
+        self.write(arg=f"GAME OVER!", align="center", font=self.font)
