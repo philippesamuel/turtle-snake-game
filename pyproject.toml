@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "snake-game"
-version = "0.1.0"
+version = "0.2.0"
 description = "Snake game built with Python's turtle package"
 authors = ["Philippe Costa <philippe.sa.costa@gmail.com>"]
 license = "MIT"

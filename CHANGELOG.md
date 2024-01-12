@@ -9,6 +9,11 @@ and this project adheres to `Semantic Versioning <https://semver.org/spec/v2.0.0
 
 -
 
+## [v0.2.0] - 2024-01-12
+
+- Scoreboard is now implemented.
+- Collisions with the border of the screen or with itself are now implemented.
+
 ## [v0.1.0] - 2024-01-12
 
 - Initial release.
