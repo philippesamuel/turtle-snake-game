@@ -10,6 +10,16 @@ Simple snake game built with Python's turtle package.
 
 ## Installation
 
+### with pipx
+Test the game without permanently installing it:
+   
+     $ pipx run --spec git+https://github.com/philippesamuel/turtle-snake-game.git snake-game
+
+Install the command `snake-game` in your machine and execute it to play the game:
+     
+     $ pipx install git+https://github.com/philippesamuel/turtle-snake-game.git
+     $ snake-game
+
 ### with pip
 1. Clone the repository
 2. (Optional) Create a virtual environment with `python -m venv .venv` and activate 
@@ -23,6 +33,7 @@ Simple snake game built with Python's turtle package.
    `poetry shell` or use venv with `poetry config virtualenvs.in-project true`
 3. Install the dependencies with `poetry install`
 4. Run the game with `poetry run python snake_game/main.py` or `python snake_game/main.py`
+
 
 
 You can customize the game by setting environment variables and/or changing the values in `.env`. (See `example.env`)
