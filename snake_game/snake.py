@@ -2,8 +2,8 @@
 from itertools import pairwise
 from turtle import Turtle
 
-from typings import Color, TurtleCallback
-from config import settings
+from snake_game.typings import Color, TurtleCallback
+from snake_game.config import settings
 
 UP = 90
 DOWN = -90

@@ -12,6 +12,9 @@ python = "^3.11"
 pydantic-settings-toml = "^0.2.0"
 loguru = "^0.7.2"
 
+[tool.poetry.scripts]
+snake-game = 'snake_game.main:main'
+
 
 [build-system]
 requires = ["poetry-core"]
